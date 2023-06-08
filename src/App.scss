@@ -1,0 +1,63 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// V a r i a b l e s 
+$blue: #0066FF;
+$black: #151515;
+
+
+
+//H e a d e r 
+
+.header {
+  .header-container {
+    max-width: 1220px;
+    margin: 0 auto;
+    background-color: grey;
+    padding: 0 10px;
+
+    .header-inner {
+      padding-top: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      .logo {}
+
+      .header-nav {
+
+        .header-list {
+          display: flex;
+          gap: 35px;
+
+          .nav-item {
+
+            .nav-link {
+              color: #fff;
+              text-transform: uppercase;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+}
