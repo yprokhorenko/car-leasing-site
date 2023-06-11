@@ -4,11 +4,11 @@ import headerImg from "../assets/Header-img.png";
 
 const Header = () => {
   return (
-    <header className="header">
+    <header className="header header-main">
       <div className="header-container">
         <div className="header-inner">
           <a className="logo" href="#">
-            <img src={headerImg} alt="Logo" />
+            <img className="logo-img" src={headerImg} alt="Logo" />
           </a>
           <nav className="header-nav">
             <ul className="header-list">

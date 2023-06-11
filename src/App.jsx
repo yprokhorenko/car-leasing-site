@@ -9,7 +9,6 @@ import "./App.scss";
 
 const App = () => {
   return (
-   
       <div className="wrapper">
         <Header />
         <div className="wrapper-content">
