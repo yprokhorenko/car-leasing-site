@@ -1,8 +1,8 @@
 import React from "react";
-import { array } from "../oneTwo";
+import { array } from "../oneTwo.jsx";
 import google from "../assets/google-play.png";
 import appStore from "../assets/app-store.png";
-import { copyright } from "../oneTwo";
+import { copyright } from "../oneTwo.jsx";
 
 export const Footer = () => {
   return (
