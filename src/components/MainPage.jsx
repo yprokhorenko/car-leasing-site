@@ -12,6 +12,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
+import { BackToTopButton } from "./additional-features/BackToTopButton";
 
 const MainPage = () => {
   return (
@@ -157,6 +158,7 @@ const MainPage = () => {
               );
             })}
           </ul>
+          <BackToTopButton/>
         </div>
       </section>
     </>

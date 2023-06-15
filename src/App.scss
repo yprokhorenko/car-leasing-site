@@ -47,6 +47,8 @@ $black: #151515;
 //H e a d e r 
 
 .header {
+  background-color: grey;
+
   .header-container {
     max-width: 1220px;
     margin: 0 auto;
@@ -396,6 +398,7 @@ $black: #151515;
   }
 
 }
+
 // Important section (Main Page)
 .important {
   padding-bottom: 100px;
@@ -428,7 +431,105 @@ $black: #151515;
       .important__item-desc {}
     }
   }
+}
 
 
 
+// CONTACTS PAGE
+.contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0 150px 0;
+
+
+  .contacts__title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .contacts__subtitle {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+
+  }
+
+  .contacts__form {
+    color: $black;
+    margin: 50px auto;
+    max-width: 600px;
+
+
+
+    .upper-inputs {
+      display: flex;
+      justify-content: space-between;
+
+      .name-block {
+        .name__input {
+          padding: 20px;
+          width: 270px;
+          border: 1px solid #0066FF;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      .phone-block {
+        .phone__input {
+          width: 270px;
+          padding: 20px;
+          border: 1px solid #0066FF;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+
+  .textarea-block {
+    .textarea__input {
+      border: 1px solid #0066FF;
+      min-height: 290px;
+      margin-top: 40px;
+      padding: 20px;
+      resize: none;
+      outline: none;
+      width: 600px;
+
+    }
+  }
+
+  .form-btn {
+    margin-top: 40px;
+    padding: 13px 60px;
+    width: 180px;
+    background-color: $black;
+    color: white;
+
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.error {
+  position: absolute;
+}
+
+.form-btn {
+  display: block;
+  margin: 0 auto;
+}
+
+.success-message {
+  position: absolute;
 }
