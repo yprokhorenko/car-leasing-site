@@ -1,24 +1,32 @@
 import React from "react";
-import { menuItems } from "../header-nav-data.js";
+import { menuItems } from "../data";
 import headerImg from "../assets/Header-img.png";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Header = () => {
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
   return (
-    <header className="header header-main">
+    <header className={`header ${isHomePage ? "header-main" : ""}`}>
       <div className="header-container">
         <div className="header-inner">
-          <a className="logo" href="#">
+          <NavLink exact to="/" className="logo">
             <img className="logo-img" src={headerImg} alt="Logo" />
-          </a>
+          </NavLink>
           <nav className="header-nav">
             <ul className="header-list">
               {menuItems.map((item) => {
                 let { title, link, id } = item;
                 return (
                   <li className="nav-item" key={id}>
-                    <a href={link} className="nav-link">
+                    <NavLink
+                      exact
+                      to={link}
+                      className="nav-link"
+                      activeClassName="active"
+                    >
                       {title}
-                    </a>
+                    </NavLink>
                   </li>
                 );
               })}

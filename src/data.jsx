@@ -4,6 +4,23 @@ import { RiPercentLine } from "react-icons/ri";
 import { FaRegCreditCard } from "react-icons/fa";
 import { AiOutlineRocket } from "react-icons/ai";
 
+
+export const menuItems = [
+  { id: 1, title: "new cars", link: "/" },
+  { id: 2, title: "catalog", link: "/catalog" },
+  // { id: 3, title: "finance", link: "/" },
+  // { id: 4, title: "lease vs buy", link: "/" },
+  { id: 5, title: "contacts", link: "/contacts" },
+];
+
+export const sliderData = [
+  { id: 1, url: "src/assets/mainSliderImages/car1.jpg" },
+  { id: 2, url: "src/assets/mainSliderImages/car2.jpg" },
+  { id: 3, url: "src/assets/mainSliderImages/car3.jpg" },
+  { id: 4, url: "src/assets/mainSliderImages/car4.jpg" },
+];
+
+
 export const array = [
   {
     titleMain: "Products",

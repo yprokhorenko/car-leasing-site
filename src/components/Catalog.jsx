@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import  {carsCatalog}  from "../oneTwo";
+import  {carsCatalog}  from "../data";
 
 const allCategories = ['All', ...new Set (carsCatalog.map((item) => item.brand))];
 console.log(allCategories);

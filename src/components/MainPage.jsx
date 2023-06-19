@@ -1,10 +1,11 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { sliderData } from "../sliderData";
+import { sliderData } from "../data";
 import {
   WhyLeaseSectionData,
   howDoesSectionData,
   importantSectionData,
-} from "../oneTwo.jsx";
+} from "../data.jsx";
+import { NavLink } from "react-router-dom";
 
 import { Autoplay, Pagination, EffectFade } from "swiper";
 import React from "react";
@@ -20,9 +21,9 @@ const MainPage = () => {
       <section className="top">
         <div className="container">
           <h1 className="top__title">Leasing with us</h1>
-          <a href="#" className="top__link">
+          <NavLink to="/catalog" className="top__link" activeClassName="active">
             FIND A CAR
-          </a>
+          </NavLink>
         </div>
       </section>
       <div className="slider">
@@ -149,7 +150,7 @@ const MainPage = () => {
               return (
                 <li className="important__item" key={id}>
                   <img
-                  src={image}
+                    src={image}
                     alt="image"
                     className="important__item-img"
                   />
@@ -158,7 +159,7 @@ const MainPage = () => {
               );
             })}
           </ul>
-          <BackToTopButton/>
+          <BackToTopButton />
         </div>
       </section>
     </>

@@ -1,13 +1,13 @@
 import React from "react";
-import { array } from "../oneTwo.jsx";
+import { array } from "../data.jsx";
 import google from "../assets/google-play.png";
 import appStore from "../assets/app-store.png";
-import { copyright } from "../oneTwo.jsx";
+import { copyright } from "../data.jsx";
 
 export const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer-container">
+      <div className="container">
         <nav className="footer__menu">
           {array.map((arr) => {
             const { titleMain, info } = arr;
