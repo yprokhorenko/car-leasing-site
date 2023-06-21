@@ -20,7 +20,6 @@ export const sliderData = [
   { id: 4, url: "src/assets/mainSliderImages/car4.jpg" },
 ];
 
-
 export const array = [
   {
     titleMain: "Products",
@@ -78,7 +77,7 @@ export const WhyLeaseSectionData = [
   },
 ];
 
-// How  -- section
+                                                  // How  -- section
 export const howDoesSectionData = [
   {
     id: 1,

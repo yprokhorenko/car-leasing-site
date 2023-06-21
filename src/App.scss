@@ -44,7 +44,7 @@ $black: #151515;
 
 
 
-                                         //H e a d e r 
+//H e a d e r 
 
 
 .header {
@@ -108,24 +108,28 @@ $black: #151515;
 }
 
 
-                                     //F o o t e r 
+//F o o t e r 
 
 .footer {
   background-color: $black;
   color: white;
   padding: 30px 0;
 
+
   &__menu {
     display: flex;
     justify-content: space-around;
     margin-bottom: 20px;
+    gap: 15px;
 
     &-list {
-      max-width: 250px; 
+      max-width: 250px;
+
 
       .footer__menu-title {
         padding-bottom: 10px;
       }
+
       .footer__menu-item {
         padding-bottom: 8px;
 
@@ -166,7 +170,7 @@ $black: #151515;
 
 }
 
-                                  // M a i n   P a g e 
+// M a i n   P a g e 
 
 .top {
   color: #fff;
@@ -180,31 +184,32 @@ $black: #151515;
 
 
 
-    &__title {
-      font-size: 90px;
-      padding-bottom: 40px;
+  &__title {
+    font-size: 90px;
+    padding-bottom: 40px;
 
-    }
-
-    &__link {
-      display: inline-block;
-      max-width: 350px;
-      width: 100%;
-      padding: 20px;
-      font-size: 30px;
-      text-transform: uppercase;
-      background-color: $black;
-      transition: 1s ease;
-      &:hover {
-        transform: scale(1.05);
-        transition: 0.3s ease;
-        
-
-      }
-    }
   }
 
-                                    //Slider
+  &__link {
+    display: inline-block;
+    max-width: 350px;
+    width: 100%;
+    padding: 20px;
+    font-size: 30px;
+    text-transform: uppercase;
+    background-color: $black;
+    transition: 1s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: 0.3s ease;
+
+
+    }
+  }
+}
+
+//Slider
 
 .swiper {
   width: 100%;
@@ -255,8 +260,8 @@ $black: #151515;
   bottom: 30px;
 }
 
-                       // W h y   L e a s e    s e c t i o n 
-                       
+// W h y   L e a s e    s e c t i o n 
+
 .why-lease {
   padding: 80px 0;
 
@@ -269,14 +274,15 @@ $black: #151515;
 
   &__list {
     display: flex;
-    max-width: 1200px;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
 
     .why-lease__item {
       display: flex;
       flex-direction: column;
       align-items: center;
       max-width: 270px;
+      margin: 10px;
 
       &-img {
         height: 150px;
@@ -305,7 +311,7 @@ $black: #151515;
   }
 }
 
-                           //How does Leasing work   s e c t i o n 
+//How does Leasing work   s e c t i o n 
 .how-does {
   max-width: 620px;
   margin-bottom: 80px;
@@ -360,7 +366,7 @@ $black: #151515;
         align-items: center;
 
         .detail-desc {
-          width: 300px;
+          max-width: 300px;
         }
       }
     }
@@ -372,7 +378,8 @@ $black: #151515;
   }
 }
 
-                       // M a i n P a g e   V i d e o    S e c t i o n    
+
+// M a i n P a g e   V i d e o    S e c t i o n    
 
 .vid-section {
   padding-bottom: 100px;
@@ -393,9 +400,11 @@ $black: #151515;
     font-weight: 700;
   }
 
+  .main-video {}
 }
 
-                        // Important section (Main Page)
+
+// Important section (Main Page)
 .important {
   padding-bottom: 100px;
 
@@ -413,24 +422,25 @@ $black: #151515;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
 
     .important__item {
-      max-width: 270px;
+      max-width: 260px;
 
       &-img {
         margin-bottom: 10px;
-        width: 270px;
+        width: 100%;
         height: 150px;
         object-fit: cover;
       }
 
-      &-desc {color: red;}
+      // &-desc {}
     }
   }
 }
 
-
-                                        // CONTACTS PAGE
+// CONTACTS PAGE
 .contacts {
   display: flex;
   justify-content: center;
@@ -448,6 +458,7 @@ $black: #151515;
     font-size: 24px;
     font-weight: 700;
     text-align: center;
+    margin: 0 20px;
   }
 
   &__form {
@@ -458,6 +469,7 @@ $black: #151515;
     .upper-inputs {
       display: flex;
       justify-content: space-between;
+
 
       .name-block {
         .name__input {
@@ -523,8 +535,7 @@ $black: #151515;
   position: absolute;
 }
 
-
-                                           //Catalog Page 
+//Catalog Page 
 
 .catalog {
   padding: 100px 0 150px 0;
@@ -543,8 +554,9 @@ $black: #151515;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 30px;
-    margin-bottom: 30px;
+    margin: 0 20px 20px 20px;
 
     .catalog__btn {
       border: none;
@@ -648,9 +660,239 @@ $black: #151515;
       margin: 0 auto;
       width: 60%;
     }
-  
+
     .catalog__car {
       width: 100%;
-      margin: 5px 0;    }
+      margin: 5px 0;
+    }
+  }
+}
+
+
+@media screen and (max-width: 515px) {
+  .vid-section {}
+
+  .main-video {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+
+  .footer__menu {
+
+    gap: 15px;
+  }
+
+  .copy__nav-list {
+    display: flex;
+    gap: 20px !important;
+  }
+
+  .copy__nav-item {}
+
+  .vid-section__title {
+    font-size: 25px;
+    padding: 0 20px;
+  }
+
+  .vid-section__sub-title {
+    font-size: 20px;
+  }
+
+  .how-does__title {
+    font-size: 25px;
+    margin-bottom: -40px;
+    padding: 0 20px;
+  }
+
+  .how-does_desc {}
+
+  .detail-number {
+    margin-left: 10px !important;
+
+  }
+
+  .detail-desc {
+    max-width: 250px !important;
+
+  }
+
+  .why-lease__title {
+    font-size: 25px;
+    margin: 0 0 10px 0;
+  }
+
+  .why-lease__list .why-lease__item-title {
+    margin: 10px 0;
+  }
+
+  .why-lease__item-img {
+    transform: scale(0.8);
+  }
+
+  .why-lease__item-text {
+    font-size: 14px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 20px;
+  }
+  .logo-img {
+margin-right: 50px  }
+
+.catalog__car {
+  width: 300px !important;
+}
+.catalog__cars {
+  padding: 0;
+}
+
+
+.nav-item {
+  font-size: 14px;
+}
+
+.contacts__subtitle {font-size: 18px;
+}
+ 
+}
+
+                               //Media <640 px
+
+@media (max-width: 640px) {
+  
+.contact__form {
+  width: 700px !important;
+  
+}
+  .upper-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+  .name-block {
+    padding: 0 0 40px 0;
+  }  
+
+  .textarea-block {
+  width: 300px;
+  margin: 0  auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  }
+
+  .textarea__input, .name__input, .phone__input {
+    width: 300px !important;
+
+  }
+ 
+
+    .name__input > .error {
+      margin-top: 20px !important;
+    }
+    .error {
+      width: 300px;
+      font-size: 12px;
+      }
+
+      .success-message {
+        width: 300px;
+        margin: 0 auto;
+        position:absolute;
+        font-size: 12px;
+        color: green;
+    
+
+    }
+
+        .header-list {
+          display: none !important;
+        }
+    
+        .menu-btn {
+          display: block !important;
+          color: white;
+          border: none;
+          background: none;
+    
+        }
+    
+        .menu-btn-icon {
+          text-align: center;
+          font-size: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 5px;
+    
+    
+        }
+    
+        .menu-btn:hover {
+          border-radius: 50%;
+          background-color: #1515158f;
+          cursor: pointer;
+        }
+        
+                                              // 
+                                              .menu-btn {
+                                                display: flex;
+                                              }
+                                              .menu-btn, .logo-img {
+                                                z-index: 25 ;
+                                                position: relative;
+                                                }
+                                               
+        .header-list { 
+          padding: 50px;
+align-items: center;          
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 24;
+          position: absolute;
+          background-color: #414141;
+          height: 100vh;
+          flex-direction: column;
+          display: flex !important;
+padding-top: 200px;
+transition: 0.5s ease-in-out;
+
+transform: translateY(-100%);
+        }
+   
+        .header-list-active {
+          transform: translateY(0);
+
+        }
+
+  }
+@media screen and (max-width: 1040px) {
+  .vid-section {
+    margin-bottom: -50px;
+  }
+
+  .main-video {
+    width: 100% !important;
+    padding: 0 20px;
+    height: 350px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 50px;
+  }
+
+  .header-inner {
+    padding: 0 20px;
+  }
+
+  .top__title {
+    font-size: 80px;
   }
 }

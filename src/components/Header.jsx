@@ -1,9 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import { menuItems } from "../data";
 import headerImg from "../assets/Header-img.png";
 import { NavLink, useLocation } from "react-router-dom";
+import { RiMenuLine } from "react-icons/Ri";
 
 const Header = () => {
+  const [showMenu, setShowMenu] = useState(false); 
+
   const location = useLocation();
   const isHomePage = location.pathname === "/";
   return (
@@ -14,7 +17,10 @@ const Header = () => {
             <img className="logo-img" src={headerImg} alt="Logo" />
           </NavLink>
           <nav className="header-nav">
-            <ul className="header-list">
+            <button onClick={() => setShowMenu(!showMenu)} className="menu-btn" style={{ display: "none" }}>
+              <span className="menu-btn-icon"><RiMenuLine /></span>
+            </button>
+            <ul className={`header-list ${showMenu ? "header-list-active" : ""}`}>
               {menuItems.map((item) => {
                 let { title, link, id } = item;
                 return (

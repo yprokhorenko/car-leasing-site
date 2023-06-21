@@ -126,12 +126,13 @@ const MainPage = () => {
             Find out how easy it is to lease from D&M
           </p>
           <iframe
+          width="1000px"
+          height="500px"
             className="main-video"
-            width="1000"
-            height="500"
             src="https://www.youtube.com/embed/US05CFZ_JQI?controls=0"
-            title="YouTube video player"
-            frameborder="0"
+            title="Відеопрогравач YouTube"
+            frameBorder="0"
+            allowFullScreen
           ></iframe>
         </div>
       </section>

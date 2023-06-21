@@ -85,13 +85,15 @@ const Contacts = () => {
                   name="message"
                   placeholder="Message"
                   autoComplete="off"
-                />
+                /> 
+            
                 <ErrorMessage name="message" component="div" className="error" />
-              </div>
-
-              {submitSuccess && (
+                {submitSuccess && (
                 <div className="success-message">Sent successfully! Thank you!</div>
               )}
+              </div>
+
+             
 
               <button className="form-btn" type="submit">
                 Submit
