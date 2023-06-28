@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
+import { ThemeContext } from "./additional-features/ThemeContext";
 
 const Contacts = () => {
   const [submitSuccess, setSubmitSuccess] = useState(false);
@@ -38,8 +39,11 @@ const Contacts = () => {
       .min(30, "Message should be at least 30 characters long"),
   });
 
+  const { theme } = useContext(ThemeContext);
+
+
   return (
-    <div className="contacts">
+    <div className={`contacts ${theme}`}>
       <div className="container">
         <div className="contacts__title">Contact Us</div>
         <div className="contacts__subtitle">

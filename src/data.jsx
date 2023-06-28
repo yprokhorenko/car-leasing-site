@@ -97,22 +97,22 @@ export const howDoesSectionData = [
 export const importantSectionData = [
   {
     id: 1,
-    image: "https://kept.com.ua/image/4Klo/4.jpg",
+    image: "https://i.ibb.co/Chrc8pn/1.jpg",
     desc: "Monthly payments on leases are generally 20% - 30% cheaper than loans",
   },
   {
     id: 2,
-    image: "https://kept.com.ua/image/4Klp/1.jpg",
+    image: "https://i.ibb.co/tcsxxh7/2.jpg",
     desc: "You may be eligible for a tax break if you use the leased vehicle for business purposes",
   },
   {
     id: 3,
-    image: "https://kept.com.ua/image/4Klq/2.jpg",
+    image: "https://i.ibb.co/kg4VjMj/3.jpg",
     desc: "Easy to upgrade to the newest vehicle model every few years",
   },
   {
     id: 4,
-    image: "https://kept.com.ua/image/4Klr/3.jpg",
+    image: "https://i.ibb.co/0QTL6t1/4.jpg",
     desc: "There are often fees charged if you drive more than your lease's mileage allowance",
   },
 ];

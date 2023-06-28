@@ -3,6 +3,7 @@ import { menuItems } from "../data";
 import headerImg from "../assets/Header-img.png";
 import { NavLink, useLocation } from "react-router-dom";
 import { RiMenuLine } from "react-icons/Ri";
+import ThemeToggle from "../components/additional-features/ThemeToggle";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false); 
@@ -12,7 +13,11 @@ const Header = () => {
   return (
     <header className={`header ${isHomePage ? "header-main" : ""}`}>
       <div className="header-container">
+      
+
         <div className="header-inner">
+        <ThemeToggle/>
+
           <NavLink exact to="/" className="logo">
             <img className="logo-img" src={headerImg} alt="Logo" />
           </NavLink>
@@ -30,6 +35,7 @@ const Header = () => {
                       to={link}
                       className="nav-link"
                       activeClassName="active"
+                      onClick={() => setShowMenu(!showMenu)}
                     >
                       {title}
                     </NavLink>

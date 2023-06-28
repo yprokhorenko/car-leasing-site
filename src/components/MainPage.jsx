@@ -8,16 +8,19 @@ import {
 import { NavLink } from "react-router-dom";
 
 import { Autoplay, Pagination, EffectFade } from "swiper";
-import React from "react";
+import React, {useContext} from "react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import { BackToTopButton } from "./additional-features/BackToTopButton";
+import { ThemeContext } from "./additional-features/ThemeContext";
 
 const MainPage = () => {
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <>
+    <div className={theme}>
       <section className="top">
         <div className="container">
           <h1 className="top__title">Leasing with us</h1>
@@ -163,7 +166,7 @@ const MainPage = () => {
           <BackToTopButton />
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

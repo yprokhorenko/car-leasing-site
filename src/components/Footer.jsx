@@ -9,14 +9,14 @@ export const Footer = () => {
     <footer className="footer">
       <div className="container">
         <nav className="footer__menu">
-          {array.map((arr) => {
+          {array.map((arr,index) => {
             const { titleMain, info } = arr;
             return (
-              <ul key={titleMain} className="footer__menu-list">
+              <ul key={index} className="footer__menu-list">
                 <h3 className="footer__menu-title">{titleMain}</h3>
-                {Object.values(info).map((item) => {
+                {Object.values(info).map((item,index) => {
                   return (
-                    <li className="footer__menu-item">
+                    <li className="footer__menu-item" key={index}>
                       <a className="footer__menu-link" href="#">
                         {item}
                       </a>

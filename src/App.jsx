@@ -7,6 +7,7 @@ import Catalog from "./components/Catalog";
 import Contacts from "./components/Contacts";
 import "./App.scss";
 import Preloader from "./components/additional-features/Preloader";
+import { ThemeProvider } from "./components/additional-features/ThemeContext";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -18,20 +19,21 @@ const App = () => {
     return <Preloader />;
   }
   return (
-    <div className="wrapper">
-      <>
-        <Header />
-        <div className="wrapper-content">
-          <Routes>
-            <Route exact path="/" element={<MainPage />} />
-            <Route path="/catalog" element={<Catalog />} />
-            <Route path="/contacts" element={<Contacts />} />
-          </Routes>
-        </div>
-        <Footer />
-      </>
-      )
-    </div>
+    <ThemeProvider>
+      <div className="wrapper">
+        <>
+          <Header />
+          <div className="wrapper-content">
+            <Routes>
+              <Route exact path="/" element={<MainPage />} />
+              <Route path="/catalog" element={<Catalog />} />
+              <Route path="/contacts" element={<Contacts />} />
+            </Routes>
+          </div>
+          <Footer />
+        </> 
+      </div>
+    </ThemeProvider>
   );
 };
 
